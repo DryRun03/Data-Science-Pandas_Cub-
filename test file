@@ -1,0 +1,24 @@
+import sys
+sys.executable
+import sklearn
+%load_ext autoreload
+%autoreload 2
+import numpy as np
+import pandas_cub as pdc
+import pandas_cub_final as pdcf
+import pandas as pd
+name = np.array(['Penelope', 'Niko', 'Eleni'])
+state = np.array(['Texas', 'California', 'Texas'])change 
+height = np.array([3.6, 3.5, 5.2])
+school = np.array([True, False, True])
+weight = np.array([45, 40, 130])
+
+data = {'name': name, 'state': state, 'height': height, 
+        'school': school, 'weight': weight}
+
+df = pdc.DataFrame(data)
+df_final = pdcf.DataFrame(data)
+df_pandas = pd.DataFrame(data)
+df
+df_final
+df_pandas
